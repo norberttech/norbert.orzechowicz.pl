@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Norbert Orzechowicz</title>
+    <style>
+        body {
+            font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+            font-size: 20pt;
+            margin-top: 20px;
+        }
+
+        .table {
+            display: table;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .row {
+            display: table-row;
+        }
+
+        .cell {
+            display: table-cell;
+            padding: 4px 5px;
+        }
+
+        .strong {
+            font-weight: bold;
+        }
+
+        @media all and (max-width: 400px) {
+            .table {
+                display: block;
+            }
+            .row {
+                display: block;
+            }
+            .cell {
+                display: block;
+            }
+        }
+        @media all and (min-width: 800px) {
+            .table {
+                width: 800px;
+            }
+        }
+    </style>
+    <script type="text/javascript">
+        (function (_window, _doc) {
+            var EMAIL_AREA_ID = 'target-field-for-contact';
+            var NAME = ['no', 'rb','ert'];
+            var SURNAME = ['orzech','owicz'];
+            var DOMAIN = 'pl';
+
+            _window.addEventListener("load", function() {
+                var $emailArea = _doc.getElementById(EMAIL_AREA_ID);
+
+                $emailArea.innerHTML = NAME.join('') + decodeURIComponent('%40') + SURNAME.join('') + '.' + DOMAIN;
+            });
+        }(window, document));
+    </script>
+</head>
+<body>
+    <div class="table">
+        <div class="row">
+            <div class="cell strong">
+                Nazwa&nbsp;firmy
+            </div>
+            <div class="cell">
+                norbert.tech
+            </div>
+        </div>
+        <div class="row">
+            <div class="cell strong">
+                NIP
+            </div>
+            <div class="cell">
+                6852282788
+            </div>
+        </div>
+        <div class="row">
+            <div class="cell strong">
+                REGON
+            </div>
+            <div class="cell">
+                123045214
+            </div>
+        </div>
+        <div class="row">
+            <div class="cell strong">
+                Email
+            </div>
+            <div class="cell" id="target-field-for-contact"></div>
+        </div>
+    </div>
+</body>
+</html>
